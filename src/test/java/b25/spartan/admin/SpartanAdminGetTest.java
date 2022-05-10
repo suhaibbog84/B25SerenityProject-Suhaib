@@ -39,23 +39,7 @@ public class SpartanAdminGetTest {
         @Test
         public void getOneSpartan(){
 
-            given()
-                    .accept(ContentType.JSON)
-                    .and()
-                    .auth().basic("admin","admin")
-                    .pathParam("id",8)
-                    .when()
-                    .get("/api/spartans/{id}");
 
-            System.out.println("lastResponse().statusCode() = " + lastResponse().statusCode());
-            System.out.println("lastResponse().path(\"id\") = " + lastResponse().path("id"));
-            System.out.println("lastResponse().jsonPath().getString(\"name\") = " + lastResponse().jsonPath().getString("name"));
-
-            Ensure.that("status code is 200", vRes -> vRes.statusCode(200));
-
-            Ensure.that("Content-type is JSON", vRes -> vRes.contentType(ContentType.JSON));
-
-            Ensure.that("ID is 8", vRes -> vRes.body("id",is(8)));
 
         }
 
