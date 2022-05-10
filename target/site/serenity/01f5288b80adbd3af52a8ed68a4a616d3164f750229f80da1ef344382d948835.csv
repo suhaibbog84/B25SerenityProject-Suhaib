@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Spartan admin get test","Get all spartan","SUCCESS","2022-05-10T12:24:13.812455-04:00[America/New_York]","0.0","3.03"
-"Spartan admin get test","Get one spartan","SUCCESS","2022-05-10T12:24:16.858783-04:00[America/New_York]","0.0","0.72"
-"Spartan editor post test","Editor should be able to POST","SUCCESS","2022-05-10T12:24:19.486206-04:00[America/New_York]","0.0","0.61"
