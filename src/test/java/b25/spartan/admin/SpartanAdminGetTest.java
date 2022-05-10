@@ -39,7 +39,23 @@ public class SpartanAdminGetTest {
         @Test
         public void getOneSpartan(){
 
+                given()
+                        .accept(ContentType.JSON)
+                        .and()
+                        .auth().basic("admin","admin")
+                        .pathParam("id",8)
+                        .when()
+                        .get("/api/spartans/{id}");
 
+                //if you send a request using serenityRest, the response object
+                //can be obtained from the method called lastResponse() without being saved separately
+                //same with Response response object
+
+                System.out.println("lastResponse().statusCode() = " + lastResponse().statusCode());
+
+                System.out.println("lastResponse().path(\"id\") = " + lastResponse().path("id"));
+
+                System.out.println(lastResponse().jsonPath().getString("name"));
 
         }
 

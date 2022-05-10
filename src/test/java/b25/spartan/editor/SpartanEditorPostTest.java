@@ -40,7 +40,18 @@ public class SpartanEditorPostTest extends SpartanNewBase {
                 .when()
                 .post("/spartans")
                 .then().log().all();
-    /*
+
+        Ensure.that("Status code is 201",sCode -> sCode.statusCode(201));
+        Ensure.that("Content-type JSON",contType -> contType.contentType(ContentType.JSON));
+        Ensure.that("success message is A Spartan is Born!",succMsg -> succMsg.body("success",is("A Spartan is Born!")));
+        Ensure.that("ID is not null", id -> id.body("data.id", notNullValue()));
+        Ensure.that("name is correct", name -> name.body("data.name", is(randomSpartanMap.get("name"))));
+        Ensure.that("gender is correct", gender -> gender.body("data.gender", is(randomSpartanMap.get("gender"))));
+        Ensure.that("phone is correct", phone -> phone.body("data.phone", is(randomSpartanMap.get("phone"))));
+
+        Ensure.that("Location header contains ID", location -> location.header("Location", is(endsWith(location.extract().jsonPath().getString("data.id")))));
+
+        /*
                 status code is 201
                 content type is Json
                 success message is A Spartan is Born!
@@ -52,11 +63,9 @@ public class SpartanEditorPostTest extends SpartanNewBase {
                 check location header ends with newly generated id
          */
 
-
-
-
-
     }
+
+
 
 
 }
