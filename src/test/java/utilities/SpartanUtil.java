@@ -1,5 +1,7 @@
 package utilities;
 
+import com.github.javafaker.Faker;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
