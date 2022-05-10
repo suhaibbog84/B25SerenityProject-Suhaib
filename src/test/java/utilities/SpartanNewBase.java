@@ -1,8 +1,17 @@
 package utilities;
 
+import io.restassured.filter.log.LogDetail;
+import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+
+import static io.restassured.RestAssured.*;
+
 public class SpartanNewBase {
 
-    public static  RequestSpecification reqSpec;
+    public static RequestSpecification reqSpec;
     public static ResponseSpecification responseSpec;
     public static RequestSpecification userSpec;
     public static RequestSpecification adminSpec;

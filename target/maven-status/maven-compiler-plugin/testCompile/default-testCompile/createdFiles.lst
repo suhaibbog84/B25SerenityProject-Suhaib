@@ -1,1 +1,4 @@
+utilities/SpartanUtil.class
+utilities/SpartanNewBase.class
 b25/spartan/admin/SpartanAdminGetTest.class
+b25/spartan/editor/SpartanEditorPostTest.class
