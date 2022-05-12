@@ -188,8 +188,17 @@
         <li >
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-05-2022 13:05</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-05-2022 11:52</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -204,7 +213,7 @@
                         <td width="375px" valign="top">
                             <div class="test-count-summary">
                                 <div class="test-count-title">
-                                    0 test scenarios 
+                                    11 test scenarios 
                                     
 
                                 </div>
@@ -228,6 +237,54 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-sm-4">
+                                                            <div style="width:300px;"
+                                                                 class="chart-container automated-and-manual-results">
+                                                                <div class="ct-chart ct-square"></div>
+                                                            </div>
+                                                            <script>
+
+                                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                                var series = [{meta: 'Passing tests (automated)', value: 11}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                                // as you saw in the previous example
+                                                                var options = {
+                                                                    width: 350,
+                                                                    height: 300
+                                                                };
+
+
+                                                                new Chartist.Pie('.ct-chart', {
+                                                                    series: series,
+                                                                    labels: labels
+                                                                }, {
+                                                                    plugins: [Chartist.plugins.tooltip()],
+                                                                    donut: true,
+                                                                    donutWidth: 60,
+                                                                    donutSolid: true,
+                                                                    startAngle: 270,
+                                                                    showLabel: true
+                                                                }, options);
+
+
+                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                                    new Chartist.Pie('.ct-chart', {
+                                                                        series: series,
+                                                                        labels: labels
+                                                                    }, {
+                                                                        plugins: [Chartist.plugins.tooltip()],
+                                                                        donut: true,
+                                                                        donutWidth: 60,
+                                                                        donutSolid: true,
+                                                                        startAngle: 270,
+                                                                        showLabel: true
+                                                                    }, options);
+                                                                });
+
+
+                                                            </script>
                                                     </div>
                                                     <div class="col-sm-8">
 
@@ -244,11 +301,12 @@
                                                             </thead>
                                                             <tbody>
                                                             <tr>
-                                                                    <td class="aggregate-result-count"><i
-                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html"><i
+                                                                                    class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                                <td class="automated-stats">0</td>
-                                                                <td class="automated-stats"> </td>
+                                                                <td class="automated-stats">11</td>
+                                                                <td class="automated-stats">100%</td>
                                                             </tr>
                                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -300,7 +358,7 @@
                                                             </tr>
                                                             <tr class="summary-stats">
                                                                 <td class="aggregate-result-count">Total</td>
-                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats">11</td>
                                                                 <td class="automated-stats"></td>
                                                             </tr>
                                                             </tbody>
@@ -322,16 +380,61 @@
                                                             </thead>
                                                             <tbody>
                                                             <tr>
-                                                                <td>0ms</td>
-                                                                <td>0ms</td>
-                                                                <td>0ms</td>
-                                                                <td>0ms</td>
-                                                                <td>0ms</td>
+                                                                <td>7s</td>
+                                                                <td>7s</td>
+                                                                <td>183ms</td>
+                                                                <td>4s</td>
+                                                                <td>641ms</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <h3>Functional Coverage Overview</h3>
+
+
+                                                                    <h4>Features</h4>
+
+                                                                    <table class="table feature-coverage-table"
+                                                                           id="Feature">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th>Feature</th>
+                                                                            <th style="width:7.5em;">Scenarios</th>
+                                                                            <th style="width:7.5em;">% Pass</th>
+                                                                            <th style="width:7.5em;">Result</th>
+                                                                            <th>Coverage</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                        <a href="dac920188175d823e9a5b0eac533fbe97267e1c8f645486caf9880a21f58c5b7.html">Editor</a>
+                                                                                </td>
+                                                                                <td>11</td>
+                                                                                <td>100%</td>
+                                                                                <td>
+                                                                                        <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="progress">
+                                                                                            <div class="progress-bar"
+                                                                                                 role="progressbar"
+                                                                                                 style="width: 100%; background-color: #30cb23"
+                                                                                                 aria-valuenow="11"
+                                                                                                 title="100% success"
+                                                                                                 aria-valuemin="0"
+                                                                                                 aria-valuemax="100">
+                                                                                            </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                        </div>
+                                                    </div>
 
 
                                             </div>
@@ -342,7 +445,175 @@
                                                     <div class="col-sm-12">
                                                         <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                                            No automated tests were executed
+                                                            <table class="scenario-result-table table"
+                                                                   id="scenario-results">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>story</th>
+                                                                    <th class="test-name-column">Scenario</th>
+                                                                    <th>Steps</th>
+                                                                    <th>Start Time</th>
+                                                                    <th>Duration</th>
+                                                                    <th>Result</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="c05f79533983d06cadc19c3d039a3b7c6a6c178e6dae350180a46c51994e2d23.html">Editor should be able to POST</a>
+                                                                        </td>
+                                                                        <td>9</td>
+                                                                        <td>11:51:48</td>
+                                                                        <td>4s 180ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="522b45a7ee6be310e457058efefa935f408143f193bc807e5b1c533e7ad40edd.html">New Spartan 1 - name Harvey</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:53</td>
+                                                                        <td>275ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="917f6abe304d02e932f21dd3f1c57807aaa7aa1e79fe068e8494c1a676d670e3.html">New Spartan 2 - name Sascha</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:53</td>
+                                                                        <td>367ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="e64d08a4e02eee988e92cbcf56fbae97f6862a02a1f77b2acd073e65009b241a.html">New Spartan 3 - name Yvon</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:53</td>
+                                                                        <td>227ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="eb6ee30cfab54725fb634da03b2044f575858d47912c8f33ab04065c6cab72ec.html">New Spartan 4 - name Ram</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:53</td>
+                                                                        <td>345ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="653c84fa7d048036691767d095a92b7edbf09414a7a40c85ca685423d277a97b.html">New Spartan 5 - name Cilka</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:54</td>
+                                                                        <td>211ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="0b7b920fcdcf2136fd2a58ed6a9ed508c3bb0e76028d575c74a8694de84bf57b.html">New Spartan 6 - name Erastus</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:54</td>
+                                                                        <td>580ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="55cb7ce7be11a511bad8a2eedeccb40923008dd116eac0c958557e502b06de11.html">New Spartan 7 - name Auroora</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:55</td>
+                                                                        <td>197ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="18989bbe8fca893c13f46052f593aee3e521ef0719ce2a8825bbce80e7dffa65.html">New Spartan 8 - name Berk</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:55</td>
+                                                                        <td>188ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="f097820750754becb2234701ba079c71c302bc0fe7427f37ff00c259d26518af.html">New Spartan 9 - name Eric</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:55</td>
+                                                                        <td>306ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="0e113e65988b39b16c80de6bc6345e1e6af8c9191db9f7b36c9ab66a0451a079.html">Spartan editor post test</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="056a38deb4cf7fc236d6df18b11c6e1068b97972d8b08ff08f745bcaab3fe7a2.html">New Spartan 10 - name Ajay</a>
+                                                                        </td>
+                                                                        <td>4</td>
+                                                                        <td>11:51:55</td>
+                                                                        <td>183ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
 
                                                     </div>
                                                 </div>

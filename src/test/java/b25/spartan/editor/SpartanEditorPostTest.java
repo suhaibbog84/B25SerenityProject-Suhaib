@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utilities.SpartanUtil;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static net.serenitybdd.rest.SerenityRest.given;
@@ -68,14 +69,44 @@ public class SpartanEditorPostTest extends SpartanNewBase {
          */
 
     }
+
+    /*
+        so if we want to provide custom test name for each execution
+        we can use name = "some message" structure. if we want to include index
+        we can use {index} and for using parameter values we use order of parameter index
+        just like {0} - name {1} -gender {2} - phone.
+     */
     
-    @ParameterizedTest
+    @ParameterizedTest(name = "New Spartan {index} -"+" name {0}")
     @CsvFileSource(resources = "/spartanData.csv",numLinesToSkip = 1)
     public void postSpartanWithCsvFile(String nameArg, String gender, long phone){
 
         System.out.println("nameArg = " + nameArg);
         System.out.println("gender = " + gender);
         System.out.println("phone = " + phone);
+
+        Map<String,Object> spartanMap = new LinkedHashMap<>();
+        spartanMap.put("name",nameArg);
+        spartanMap.put("gender",gender);
+        spartanMap.put("phone",phone);
+
+        //send a post request as editor
+        given()
+                .auth().basic("editor","editor")
+                .and()
+                .accept(ContentType.JSON)
+                .contentType(ContentType.JSON)
+                .body(spartanMap)
+                .log().body()
+                .when()
+                .post("/spartans")
+                .then().log().all();
+
+        Ensure.that("Status code is 201",sCode -> sCode.statusCode(201));
+
+        Ensure.that("Content-type JSON",contType -> contType.contentType(ContentType.JSON));
+
+        Ensure.that("success message is A Spartan is Born!",succMsg -> succMsg.body("success",is("A Spartan is Born!")));
 
     }
 
