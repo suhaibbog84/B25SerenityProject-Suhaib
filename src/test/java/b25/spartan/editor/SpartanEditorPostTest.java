@@ -1,6 +1,9 @@
 package b25.spartan.editor;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 import utilities.SpartanNewBase;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -65,8 +68,16 @@ public class SpartanEditorPostTest extends SpartanNewBase {
          */
 
     }
+    
+    @ParameterizedTest
+    @CsvFileSource(resources = "/spartanData.csv",numLinesToSkip = 1)
+    public void postSpartanWithCsvFile(String nameArg, String gender, long phone){
 
+        System.out.println("nameArg = " + nameArg);
+        System.out.println("gender = " + gender);
+        System.out.println("phone = " + phone);
 
+    }
 
 
 }
